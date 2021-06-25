@@ -36,14 +36,6 @@ const Header = () => {
     ? `${classes.navIcon4} ${classes.open}`
     : `${classes.navIcon4}`;
 
-  const body = document.querySelector("body");
-
-  useEffect(() => {
-    showNav
-      ? (body.style.overflow = "hidden")
-      : (body.style.overflow = "visible");
-  }, [showNav]);
-
   return (
     <Fragment>
       <header>
