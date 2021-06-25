@@ -1,0 +1,31 @@
+html {
+  font-family: Helvetica, sans-serif;
+  color: #231f20;
+  font-size: 12px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #231f20;
+}
+
+body {
+  touch-action: manipulation;
+}
+
+.heroImage {
+  position: block;
+  margin: auto;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 596px) {
+  .heroImage {
+    margin: auto;
+    margin-top: 5%;
+  }
+}

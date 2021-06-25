@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  padding: 5vw 5vw 5vw 0;
+  align-items: center;
+}
+
+.img {
+  padding-right: 2vw;
+  min-width: 200px;
+}
+
+.text {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-weight: 300;
+  padding-top: 0.5vw;
+}
+
+.text p {
+  padding: 1vw 0;
+  line-height: 1.3rem;
+}
+
+.title {
+  margin: 0;
+}
+.date {
+  margin: 0;
+}
+.desription {
+  margin: 0;
+}
+
+@media only screen and (max-width: 496px) {
+  .item {
+    flex-direction: column;
+  }
+}
