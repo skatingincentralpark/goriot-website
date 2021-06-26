@@ -1,11 +1,9 @@
 import React from "react";
-// import { graphql } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
-
 import Img from "gatsby-image";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout/layout";
+import Products from "../components/Products/Products";
 
 const getProducts = graphql`
   {
@@ -72,6 +70,7 @@ const ShopPage = () => {
           );
         }}
       />
+      <Products />
       {/* <h1>hello world</h1>  */}
       {/* {data.allContentfulProductItem.edges.map((edge) => {
         return (
