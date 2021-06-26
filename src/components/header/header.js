@@ -43,7 +43,7 @@ const Header = () => {
           <LogoVert className={mobileLogoClass} />
         </Link>
         <div className={classes.insideHeader}>
-          <div class={burgerClasses} onClick={showNavHandler}>
+          <div className={burgerClasses} onClick={showNavHandler}>
             <span></span>
             <span></span>
             <span></span>
