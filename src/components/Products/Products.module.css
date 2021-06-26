@@ -1,0 +1,14 @@
+.productsSection {
+  display: flex;
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media only screen and (max-width: 596px) {
+  .productsSection {
+    display: flex;
+    padding-top: 20%;
+  }
+}

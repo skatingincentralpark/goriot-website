@@ -1,0 +1,24 @@
+.productCard {
+  width: 12.5%;
+  cursor: pointer;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media only screen and (max-width: 596px) {
+  .productCard {
+    width: 25%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}

@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <Fragment>
       <header>
-        <Link to="/">
+        <Link to="/shop">
           <LogoVert className={mobileLogoClass} />
         </Link>
         <div className={classes.insideHeader}>

@@ -1,0 +1,143 @@
+.shopItemOpen {
+  display: flex;
+  flex-direction: row;
+  padding: 2vw 15vw;
+  overflow: hidden;
+}
+
+.productGallery {
+  width: 100%;
+}
+
+.content {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 5vw;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  padding-top: 1vw;
+  width: 50%;
+}
+
+.content p {
+  line-height: 1.4rem;
+}
+
+.productTitle {
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+.productPrice {
+  font-size: 1.5rem;
+}
+
+.productExtra {
+  margin: 1em 0vw;
+  padding: 0.5em 0vw;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid rgb(170, 170, 170);
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.productSizeSelect {
+  margin: 0.5vw 0;
+  width: 49%;
+}
+
+.productDescription {
+  padding-bottom: 2em;
+}
+
+.productDescription2 {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  color: rgb(170, 170, 170);
+}
+
+.border {
+  border-top: 1px solid rgb(170, 170, 170);
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.border2 {
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.hidden {
+  display: none;
+}
+
+.productExtra button {
+  border: none;
+  background-color: white;
+  font-size: 0.9rem;
+  color: rgb(170, 170, 170);
+  padding: 0;
+}
+
+.productExtra button:hover {
+  cursor: pointer;
+}
+
+.shopBtns {
+  display: flex;
+  flex-direction: row;
+}
+
+.atc {
+  margin-right: 0.5em;
+}
+
+.shopBtns button {
+  width: 50%;
+}
+
+@media only screen and (max-width: 796px) {
+  .shopItemOpen {
+    padding: 0vw 2vw;
+    flex-direction: column;
+  }
+  .content {
+    padding: 0 1em;
+    width: auto;
+    justify-content: center;
+  }
+  .productTitle {
+    order: 1;
+  }
+  .productPrice {
+    order: 1;
+    margin-bottom: 0.5em;
+  }
+  .productSizeSelect {
+    order: 1;
+    margin-bottom: 0.5em;
+  }
+  .atc {
+    order: 2;
+  }
+  .productDescription {
+    order: 6;
+  }
+  .productDescription2 {
+    order: 5;
+  }
+  .productExtra {
+    order: 5;
+  }
+  .shopBtns {
+    display: flex;
+    flex-direction: column;
+  }
+  .shopBtns button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 496px) {
+}

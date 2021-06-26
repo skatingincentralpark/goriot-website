@@ -1,6 +1,9 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import * as classes from "./Products.module.css";
+
+import Product from "./Product";
 
 const getProducts = graphql`
   {
@@ -13,7 +16,6 @@ const getProducts = graphql`
           category
           image {
             fluid(maxHeight: 420) {
-              src
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
@@ -32,19 +34,18 @@ const getProducts = graphql`
 const Products = () => {
   return (
     <div>
-      <h1>hello from products component</h1>
       <StaticQuery
         query={getProducts}
         render={(data) => {
           return (
-            <section>
+            <section className={classes.productsSection}>
               {data.products.edges.map(({ node: product }) => {
                 return (
-                  <div>
-                    <p>{product.title}</p>
-                    <small>{product.description.description}</small>
-                    <Img fluid={product.image.fluid} />
-                  </div>
+                  <Product
+                    image1={product.image[0].fluid}
+                    image2={product.image[1].fluid}
+                    id={product.id}
+                  />
                 );
               })}
             </section>

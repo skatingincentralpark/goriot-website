@@ -21,6 +21,13 @@ body {
   position: block;
   margin: auto;
   margin-top: 10%;
+  width: 400px;
+  transition: 1.5s;
+}
+
+.heroImage:hover {
+  filter: hue-rotate(360deg);
+  transition: filter 1.5s;
 }
 
 @media only screen and (max-width: 596px) {

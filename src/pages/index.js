@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
@@ -8,16 +7,7 @@ import Layout from "../components/layout/layout";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <StaticImage
-        className="heroImage"
-        src="../images/laughing.png"
-        alt="Girl Laughing"
-        placeholder="blurred"
-        layout="fixed"
-        width={767 / 2}
-        height={917 / 2}
-      />
-      <Img fluid={data.laughing.childImageSharp.fluid} />
+      <Img className="heroImage" fluid={data.laughing.childImageSharp.fluid} />
     </Layout>
   );
 };
