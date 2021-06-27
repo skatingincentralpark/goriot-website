@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../components/Layout/layout";
+import Layout from "../components/layout/layout";
 import NewsCarousell from "../components/NewsCarousell/NewsCarousell";
 
 const DUMMY_POSTS = [

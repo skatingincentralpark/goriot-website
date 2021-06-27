@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "../Header/header";
+import Header from "../header/header";
 
 import "./layout.css";
 
