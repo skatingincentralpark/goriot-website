@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "body-scroll-lock": "*",
     "gatsby": "^3.6.2",
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-image": "^1.8.0",

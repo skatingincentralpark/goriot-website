@@ -1,4 +1,6 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
+import { Link } from "gatsby";
+
 import Img from "gatsby-image";
 
 import * as classes from "./ProductOpen.module.css";
@@ -32,7 +34,6 @@ const ProductOpen = (props) => {
     >
       <div className={classes.productGallery}>
         <Img fluid={props.image}></Img>
-        {/* <img src={img1} alt="" /> */}
       </div>
       <div className={classes.content}>
         <h1 ref={nameInputRef} className={classes.productTitle}>
@@ -66,7 +67,7 @@ const ProductOpen = (props) => {
           chest with wear. The collar is initially snug, however will stretch to
           a perfect fit with wear.
         </p>
-        <form action="">
+        <form className={classes.productActions} action="">
           <select
             ref={sizeInputRef}
             className={classes.productSizeSelect}
@@ -82,9 +83,11 @@ const ProductOpen = (props) => {
             <button type="submit" className={classes.atc}>
               Add To Cart
             </button>
-            <button className={classes.viewAllBtn}>View All</button>
           </div>
         </form>
+        <Link to="/shop" className={classes.viewAllBtn}>
+          View All
+        </Link>
       </div>
     </section>
   );

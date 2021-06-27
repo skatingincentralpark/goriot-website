@@ -1,12 +1,13 @@
 .shopItemOpen {
   display: flex;
   flex-direction: row;
-  padding: 2vw 15vw;
+  padding: 8vw 25vw 6vw 25vw;
   overflow: hidden;
 }
 
 .productGallery {
-  width: 100%;
+  width: 70%;
+  margin: auto;
 }
 
 .content {
@@ -14,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-left: 5vw;
+  padding-left: 3vw;
   font-size: 1rem;
   line-height: 1.4rem;
   padding-top: 1vw;
@@ -26,12 +27,15 @@
 }
 
 .productTitle {
-  margin-bottom: 0.5em;
-  font-weight: 400;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  line-height: 1.4em;
 }
 
 .productPrice {
   font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .productExtra {
@@ -46,7 +50,7 @@
 
 .productSizeSelect {
   margin: 0.5vw 0;
-  width: 49%;
+  width: 100%;
 }
 
 .productDescription {
@@ -84,23 +88,50 @@
   cursor: pointer;
 }
 
-.shopBtns {
-  display: flex;
-  flex-direction: row;
-}
-
 .atc {
-  margin-right: 0.5em;
+  background-color: black;
+  color: white;
+  padding: 1vw 2vw;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 0rem;
 }
 
-.shopBtns button {
-  width: 50%;
+.atc:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+.viewAllBtn {
+  background-color: gray;
+  color: white;
+  padding: 1vw 2vw;
+  margin-top: 0.5vw;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 0rem;
+}
+
+.viewAllBtn:hover {
+  background-color: lightgray;
+}
+
+@media only screen and (max-width: 979px) {
+  .shopItemOpen {
+    padding: 10vw 15vw 6vw 15vw;
+  }
 }
 
 @media only screen and (max-width: 796px) {
   .shopItemOpen {
     padding: 0vw 2vw;
     flex-direction: column;
+  }
+  .productGallery {
+    width: 100%;
   }
   .content {
     padding: 0 1em;
@@ -111,24 +142,23 @@
     order: 1;
   }
   .productPrice {
-    order: 1;
+    order: 2;
     margin-bottom: 0.5em;
+  }
+  .productActions {
+    order: 3;
   }
   .productSizeSelect {
-    order: 1;
     margin-bottom: 0.5em;
   }
-  .atc {
-    order: 2;
-  }
-  .productDescription {
-    order: 6;
+  .productExtra {
+    order: 4;
   }
   .productDescription2 {
     order: 5;
   }
-  .productExtra {
-    order: 5;
+  .productDescription {
+    order: 6;
   }
   .shopBtns {
     display: flex;
@@ -137,7 +167,21 @@
   .shopBtns button {
     width: 100%;
   }
+  .viewAllBtn {
+    margin-bottom: 2vw;
+    padding: 2vw 2vw;
+  }
+  .atc {
+    padding: 2vw 2vw;
+  }
 }
 
 @media only screen and (max-width: 496px) {
+  .viewAllBtn {
+    margin-bottom: 2vw;
+    padding: 4vw 2vw;
+  }
+  .atc {
+    padding: 4vw 2vw;
+  }
 }

@@ -1,0 +1,21 @@
+.announcementBar {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+}
+
+.announcementBar p {
+  text-align: right;
+}
+
+@media screen and (max-width: 769px) {
+  .announcementBar {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    padding-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 596px) {
+}

@@ -17,7 +17,7 @@ export const query = graphql`
       }
       image {
         fluid(maxHeight: 420) {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
       }
     }

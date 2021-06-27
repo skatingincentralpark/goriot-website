@@ -15,6 +15,7 @@ a {
 
 body {
   touch-action: manipulation;
+  margin: 0;
 }
 
 .heroImage {
@@ -28,6 +29,23 @@ body {
 .heroImage:hover {
   filter: hue-rotate(360deg);
   transition: filter 1.5s;
+}
+
+@keyframes rotating {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(520deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
 }
 
 @media only screen and (max-width: 596px) {
