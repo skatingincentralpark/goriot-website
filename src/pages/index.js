@@ -7,15 +7,7 @@ import Img from "gatsby-image";
 const IndexPage = ({ data }) => {
   return (
     <div>
-      <div className="redLine">
-        <p>
-          0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011
-          0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101
-          0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011
-          0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101
-          0100 1011 0010 1101 0100 1011 0010 1101
-        </p>
-      </div>
+      <div className="redLine"></div>
       <Img
         className="heroImage rotating"
         fluid={data.laughing.childImageSharp.fluid}

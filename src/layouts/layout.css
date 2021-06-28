@@ -77,14 +77,6 @@ body {
   }
 }
 
-.redLine p {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: andalemono;
-  color: white;
-  text-align: center;
-}
-
 /* ANIMATION PRACTICE TEMP STYLES END */
 
 @media only screen and (max-width: 596px) {
