@@ -11,6 +11,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-layout`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

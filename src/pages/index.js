@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import Transition from "react-transition-group/Transition";
+
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import Layout from "../components/layout/layout";
-
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <div>
+      <div className="redLine">
+        <p>
+          0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011
+          0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101
+          0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011
+          0010 1101 0100 1011 0010 1101 0100 1011 0010 1101 0100 1011 0010 1101
+          0100 1011 0010 1101 0100 1011 0010 1101
+        </p>
+      </div>
       <Img
         className="heroImage rotating"
         fluid={data.laughing.childImageSharp.fluid}
         durationFadeIn={1500}
       />
-    </Layout>
+    </div>
   );
 };
 

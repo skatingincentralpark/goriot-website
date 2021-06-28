@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import * as classes from "./Products.module.css";
 
 import Product from "./Product";

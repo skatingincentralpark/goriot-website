@@ -48,9 +48,51 @@ body {
   animation: rotating 2s linear infinite;
 }
 
+.gatsby-image-wrapper img {
+  -webkit-transition: opacity 2s ease 0s !important;
+  transition: opacity 2s ease 0s !important;
+}
+
+/* ANIMATION PRACTICE TEMP STYLES */
+.redLine {
+  background-color: red;
+  width: 7.5%;
+  height: 100%;
+  transition: opacity 1s ease-out;
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  animation: redLine 2.5s alternate infinite;
+}
+
+@keyframes redLine {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.redLine p {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: andalemono;
+  color: white;
+  text-align: center;
+}
+
+/* ANIMATION PRACTICE TEMP STYLES END */
+
 @media only screen and (max-width: 596px) {
   .heroImage {
     margin: auto;
     margin-top: 5%;
+  }
+  .redLine {
+    width: 15%;
   }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 
-import Layout from "../components/layout/layout";
 import NewsCarousell from "../components/NewsCarousell/NewsCarousell";
 
 const DUMMY_POSTS = [
@@ -44,9 +43,9 @@ const DUMMY_POSTS = [
 
 const NewsPage = (props) => {
   return (
-    <Layout>
+    <div>
       <NewsCarousell posts={DUMMY_POSTS} />
-    </Layout>
+    </div>
   );
 };
 

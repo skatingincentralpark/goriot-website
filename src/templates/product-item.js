@@ -1,7 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layout/layout";
 import ProductOpen from "../components/Products/ProductOpen";
 
 export const query = graphql`
@@ -27,7 +26,7 @@ export const query = graphql`
 const ProductPage = (props) => {
   // console.log(props.data.product.image[0].fluid);
   return (
-    <Layout>
+    <div>
       <ProductOpen
         title={props.data.product.title}
         price={props.data.product.price}
@@ -35,7 +34,7 @@ const ProductPage = (props) => {
         extraDescription={props.data.product.extraDescription.extraDescription}
         image={props.data.product.image[0].fluid}
       />
-    </Layout>
+    </div>
   );
 };
 
