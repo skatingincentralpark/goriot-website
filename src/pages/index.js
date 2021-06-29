@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Transition from "react-transition-group/Transition";
 
 import { graphql } from "gatsby";
 import Img from "gatsby-image";

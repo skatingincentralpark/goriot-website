@@ -24,4 +24,34 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+
+  const lookbookTemplate = path.resolve("./src/templates/lookbook.js");
+
+  const res2 = await graphql(`
+    query {
+      allDirectory(
+        filter: {
+          sourceInstanceName: { eq: "images" }
+          relativeDirectory: { eq: "lookbooks" }
+        }
+      ) {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  res2.data.allDirectory.edges.forEach((edge) => {
+    createPage({
+      component: lookbookTemplate,
+      path: `/lookbook/${edge.node.name}`,
+      context: {
+        name: edge.node.name,
+        link: `lookbooks/${edge.node.name}`,
+      },
+    });
+  });
 };

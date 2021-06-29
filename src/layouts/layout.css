@@ -2,6 +2,7 @@ html {
   font-family: Helvetica, sans-serif;
   color: #231f20;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -59,7 +60,7 @@ body {
   width: 7.5%;
   height: 100%;
   transition: opacity 1s ease-out;
-  z-index: 99;
+  z-index: 10;
   position: fixed;
   left: 0;
   right: 0;
