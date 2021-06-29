@@ -88,7 +88,7 @@ const Header = () => {
                   <Link onClick={closeNavHandler} to="/shop">
                     About
                   </Link>
-                  <Link onClick={closeNavHandler} to="/shop">
+                  <Link onClick={closeNavHandler} to="/lookbook/2021AW">
                     Lookbook
                   </Link>
                   <Link onClick={closeNavHandler} to="/shop">

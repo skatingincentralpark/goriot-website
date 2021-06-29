@@ -5,8 +5,12 @@ import Img from "gatsby-image";
 import * as classes from "./LookbookItems.module.css";
 
 const LookbookItems = (props) => {
+  const imgStateHandler = () => {
+    props.onClick(props.image);
+  };
+
   return (
-    <div className={classes.imgContainer}>
+    <div onClick={imgStateHandler} className={classes.imgContainer}>
       <Link>
         <Img fluid={props.image} />
       </Link>

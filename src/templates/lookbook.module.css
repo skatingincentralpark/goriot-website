@@ -1,5 +1,19 @@
+.lookbookContainer {
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+  padding: 5vw 0 0 10vw;
+}
+
+.imageMainContainer {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
 .imageNavContainer {
-  width: 200px;
+  width: 150px;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 3vw;
 }
