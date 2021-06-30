@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React, { useState, useCallback } from "react";
 
 import Img from "gatsby-image";
 import * as classes from "./LookbookItems.module.css";
 
 const LookbookItems = (props) => {
-  const imgStateHandler = () => {
-    props.onClick(props.image);
+  const currIndexHandler = (event) => {
+    props.activeIndexHandler(event.currentTarget.getAttribute("data-index"));
   };
 
   return (
-    <div onClick={imgStateHandler} className={classes.imgContainer}>
-      <Link>
-        <Img fluid={props.image} />
-      </Link>
+    <div
+      onClick={currIndexHandler}
+      className={classes.imgContainer}
+      data-index={props.index}
+      key={props.id}
+    >
+      <Img fluid={props.image} />
     </div>
-    //   <p>{props.id}</p>
   );
 };
 

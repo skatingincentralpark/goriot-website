@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <Fragment>
       <header ref={targetRef}>
-        <Link to="/shop">
+        <Link to="/">
           <div className={classes.logoContainer}>
             <LogoVert className={mobileLogoClass} />
           </div>

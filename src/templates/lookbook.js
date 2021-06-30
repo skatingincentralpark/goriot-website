@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { graphql, Link, navigate } from "gatsby";
+import React, { useState, useEffect, useCallback } from "react";
+import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import * as classes from "./lookbook.module.css";
@@ -24,36 +24,63 @@ export const pageQuery = graphql`
 `;
 
 const LookbookPage = (props) => {
-  const [img, setImg] = useState("");
+  const [imgState, setImgState] = useState({
+    imgArr: [],
+    currIndex: 0,
+  });
 
-  const setImgHandler = (image) => {
-    setImg(image);
+  const [totalImg, setTotalImg] = useState(0);
+
+  const activeIndexHandler = (index) => {
+    setImgState({ currIndex: index });
   };
 
-  // currently building the archive dropdown,
-  // have to add refs ...
-  const navigateHandler = () => {};
+  const mapArray = useCallback(() => {
+    let imgArray = [];
+    props.data.allFile.edges.map((edge) => imgArray.push(edge.node.id));
+    setTotalImg(imgArray.length + 1);
+  }, [props.data.allFile.edges]);
+
+  useEffect(() => {
+    mapArray();
+  }, [mapArray]);
 
   return (
     <div className={classes.lookbookContainer}>
       <div className={classes.imageMainContainer}>
-        <Img fluid={img} />
+        <Img
+          fluid={
+            props.data.allFile.edges[imgState.currIndex].node.childImageSharp
+              .fluid
+          }
+        />
+        <div>
+          <p>
+            {imgState.currIndex}/{totalImg}
+            <br />
+            <b>Spring / Summer 2021</b>
+            <br />
+            Spinning Ring ‘USA Cotton’ Tee
+          </p>
+        </div>
       </div>
       <div className={classes.imageNavContainer}>
-        {props.data.allFile.edges.map((edge) => (
+        {props.data.allFile.edges.map((edge, i) => (
           <LookbookItems
             image={edge.node.childImageSharp.fluid}
             id={edge.node.id}
-            onClick={setImgHandler}
+            activeIndexHandler={activeIndexHandler}
+            key={edge.node.id}
+            index={i}
           />
         ))}
-        <Link to="/">Back</Link>
-        <form action="" onChange={navigateHandler}>
-          <select name="archive" id="">
-            <option value="2021aw">2021AW</option>
-            <option value="2020ss">2020SS</option>
-          </select>
-        </form>
+        <div className={classes.lookbookLinks}>
+          <Link to="/">Back</Link>
+
+          <Link to="/lookbook/2021AW">2021AW</Link>
+
+          <Link to="/lookbook/2020SS">2020SS</Link>
+        </div>
       </div>
     </div>
   );

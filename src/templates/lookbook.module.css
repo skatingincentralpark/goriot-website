@@ -17,3 +17,16 @@
   flex-wrap: wrap;
   padding-left: 3vw;
 }
+
+.lookbookLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.lookbookLinks a {
+  text-decoration: none;
+  background-color: lightgray;
+  margin-top: 0.5vw;
+  padding: 0.25vw 0.5vw;
+  text-align: center;
+}
