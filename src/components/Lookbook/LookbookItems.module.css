@@ -1,14 +1,13 @@
 .imgContainer {
   width: 25%;
   margin: 0.25vw;
+  transition: 0.1s;
+  /* padding: 0.125vw; */
 }
 
 .imgContainer:hover {
-  /* transform: scale(105%); */
+  transform: scale(110%);
   cursor: pointer;
-}
-
-.imgContainer:active {
-  transform: translateY(-2px);
-  transition: 0.25s;
+  outline: 1px solid rgb(0, 0, 0);
+  transition: 0.1s;
 }

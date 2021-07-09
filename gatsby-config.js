@@ -3,7 +3,7 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    title: "goriot-gatsby",
+    title: "goriot",
     author: "goriot",
     description: "A clothing brand based in Sydney Australia.",
     instagramUsername: "@goriot_official",
