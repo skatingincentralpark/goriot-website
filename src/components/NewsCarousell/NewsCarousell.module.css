@@ -2,7 +2,7 @@
   padding: 3vw 0 5vw 0;
 }
 
-ul {
+.newsList ul {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;

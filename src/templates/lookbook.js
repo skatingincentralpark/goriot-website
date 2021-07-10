@@ -31,6 +31,8 @@ const LookbookPage = (props) => {
 
   const [totalImg, setTotalImg] = useState(0);
 
+  const [showArchive, setShowArchive] = useState(false);
+
   const activeIndexHandler = (index) => {
     setImgState({ currIndex: index });
   };
@@ -44,6 +46,19 @@ const LookbookPage = (props) => {
   useEffect(() => {
     mapArray();
   }, [mapArray]);
+
+  const showArchiveHandler = () => {
+    setShowArchive(true);
+    console.log(showArchive);
+  };
+
+  const hideArchiveHandler = () => {
+    setShowArchive(false);
+  };
+
+  const archiveNavClass = showArchive
+    ? `${classes.archiveLinks}`
+    : `${classes.archiveLinks} ${classes.hide}`;
 
   return (
     <div className={classes.lookbookContainer}>
@@ -75,11 +90,31 @@ const LookbookPage = (props) => {
           />
         ))}
         <div className={classes.lookbookLinks}>
-          <Link to="/">Back</Link>
+          <div className={classes.archiveDropdown}>
+            <div
+              onMouseEnter={showArchiveHandler}
+              onMouseLeave={hideArchiveHandler}
+              className={classes.archiveLabel}
+            >
+              Archive
+            </div>
+            <ul
+              onMouseEnter={showArchiveHandler}
+              onMouseLeave={hideArchiveHandler}
+              className={archiveNavClass}
+            >
+              <li>
+                <Link to="/lookbook/2021AW">2021AW</Link>
+              </li>
+              <li>
+                <Link to="/lookbook/2020SS">2020SS</Link>
+              </li>
+            </ul>
+          </div>
 
-          <Link to="/lookbook/2021AW">2021AW</Link>
-
-          <Link to="/lookbook/2020SS">2020SS</Link>
+          <div className={classes.backBtn}>
+            <Link to="/">Back</Link>
+          </div>
         </div>
       </div>
     </div>

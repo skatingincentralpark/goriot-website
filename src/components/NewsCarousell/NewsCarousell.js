@@ -19,7 +19,9 @@ const NewsCarousell = (props) => {
     <div className={classes.container}>
       <div className="leftPanel" />
       <div className="rightPanel" />
-      <ul>{newsList}</ul>
+      <div className={classes.newsList}>
+        <ul>{newsList}</ul>
+      </div>
     </div>
   );
 };
