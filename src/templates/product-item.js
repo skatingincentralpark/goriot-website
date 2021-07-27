@@ -20,11 +20,27 @@ export const query = graphql`
         }
       }
     }
+    productphotos: allFile(
+      filter: { relativeDirectory: { eq: "productphotos" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              width: 1000
+              blurredOptions: { width: 10 }
+              placeholder: NONE
+              quality: 100
+            )
+          }
+        }
+      }
+    }
   }
 `;
 
 const ProductPage = (props) => {
-  // console.log(props.data.product.image[0].fluid);
   return (
     <div>
       <ProductOpen
@@ -32,7 +48,7 @@ const ProductPage = (props) => {
         price={props.data.product.price}
         description={props.data.product.description.description}
         extraDescription={props.data.product.extraDescription.extraDescription}
-        image={props.data.product.image[0].fluid}
+        images={props.data.productphotos.edges}
       />
     </div>
   );

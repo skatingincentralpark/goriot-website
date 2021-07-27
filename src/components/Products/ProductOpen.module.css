@@ -1,24 +1,23 @@
 .shopItemOpen {
   display: flex;
   flex-direction: row;
-  padding: 8vw 25vw 6vw 25vw;
+  padding: 6vw 25vw 6vw 25vw;
   overflow: hidden;
 }
 
 .productGallery {
-  width: 70%;
-  margin: auto;
+  width: 60%;
 }
 
 .content {
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding-left: 3vw;
   font-size: 1rem;
   line-height: 1.4rem;
-  padding-top: 1vw;
+  padding-bottom: 15%;
   width: 50%;
 }
 
@@ -28,6 +27,7 @@
 
 .productTitle {
   margin-bottom: 0.2em;
+  margin-top: 0;
   font-weight: 600;
   line-height: 1.4em;
 }
@@ -54,7 +54,7 @@
 }
 
 .productDescription {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .productDescription2 {
@@ -91,7 +91,7 @@
 .atc {
   background-color: black;
   color: white;
-  padding: 1vw 2vw;
+  padding: 1.5em 2em;
   cursor: pointer;
   border: none;
   width: 100%;
@@ -106,8 +106,8 @@
 .viewAllBtn {
   background-color: gray;
   color: white;
-  padding: 1vw 2vw;
-  margin-top: 0.5vw;
+  padding: 1.5em 2em;
+  margin-top: 0.5em;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -125,9 +125,9 @@
   }
 }
 
-@media only screen and (max-width: 796px) {
+@media only screen and (max-width: 696px) {
   .shopItemOpen {
-    padding: 0vw 2vw;
+    padding: 0;
     flex-direction: column;
   }
   .productGallery {
@@ -148,17 +148,26 @@
   .productActions {
     order: 3;
   }
-  .productSizeSelect {
-    margin-bottom: 0.5em;
+  .viewAllBtn {
+    order: 4;
+    margin-bottom: 2vw;
+    padding: 1.5em;
   }
   .productExtra {
-    order: 4;
-  }
-  .productDescription2 {
     order: 5;
   }
-  .productDescription {
+  .productDescription2 {
     order: 6;
+  }
+  .productDescription {
+    order: 7;
+  }
+  .atc {
+    padding: 1.5em;
+  }
+  .productSizeSelect {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
   }
   .shopBtns {
     display: flex;
@@ -166,13 +175,6 @@
   }
   .shopBtns button {
     width: 100%;
-  }
-  .viewAllBtn {
-    margin-bottom: 2vw;
-    padding: 2vw 2vw;
-  }
-  .atc {
-    padding: 2vw 2vw;
   }
 }
 

@@ -1,42 +1,43 @@
 .lookbookContainer {
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
   display: flex;
-  padding: 5vw 0 0 10vw;
+  flex-direction: column;
+  padding: 5vw 30vw 0 30vw;
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .imageMainContainer {
-  width: 350px;
   display: flex;
   flex-direction: column;
+  width: 70%;
 }
 
 .imageNavContainer {
-  width: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 3vw;
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-auto-rows: auto;
+  grid-gap: 0.5vw;
 }
 
 .lookbookLinks {
   display: flex;
   flex-direction: row;
+  margin-top: 1em;
 }
 
-/* .lookbookLinks a {
-  text-decoration: none;
-  background-color: lightgray;
-  margin-top: 0.5vw;
-  padding: 0.25vw 0.5vw;
-  text-align: center;
-}  */
-
 .backBtn {
-  /* text-decoration: none;
-  background-color: lightgray;
-  margin: 0.5vw 1vw;
-  padding: 0.25vw 0.5vw;
-  text-align: center; */
   margin-left: 0.5vw;
 }
 

@@ -1,6 +1,8 @@
 .imgContainer {
-  width: 100%;
+  width: 25%;
+  margin: 0.25vw;
   transition: 0.1s;
+  /* padding: 0.125vw; */
 }
 
 .imgContainer:hover {

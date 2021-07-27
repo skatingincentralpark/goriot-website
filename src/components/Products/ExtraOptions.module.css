@@ -1,0 +1,68 @@
+.tempContainer {
+  width: 30%;
+  margin: auto;
+}
+
+.productExtra {
+  margin: 1em 0vw;
+  padding: 0.5em 0vw;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.moreInfo {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.show {
+  height: 200px;
+  opacity: 1;
+  border-bottom: 1px solid black;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.productExtra button {
+  border: none;
+  background-color: white;
+  font-size: 0.9rem;
+  color: black;
+  padding: 0;
+}
+
+.productExtra button:hover {
+  cursor: pointer;
+}
+
+table.sizeTable {
+  margin-top: 1vw;
+  font-family: helvetica;
+  border-collapse: separate;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.sizeTable td,
+table.sizeTable th {
+  border: 1px dotted black;
+  border-collapse: separate;
+  padding: 3px 5px 2px 5px;
+}
+table.sizeTable tbody td {
+  font-size: 0.9em;
+  color: black;
+}
+table.sizeTable thead {
+  color: black;
+}
+table.sizeTable thead th {
+  font-size: 0.9em;
+  color: black;
+}

@@ -49,10 +49,12 @@ body {
   animation: rotating 2s linear infinite;
 }
 
-.gatsby-image-wrapper img {
+/* .gatsby-image-wrapper img {
+  -webkit-transition: none !important;
+  transition: none !important;
   -webkit-transition: opacity 2s ease 0s !important;
-  transition: opacity 2s ease 0s !important;
-}
+transition: opacity 2s ease 0s !important;
+} */
 
 /* ANIMATION PRACTICE TEMP STYLES */
 .redLine {
