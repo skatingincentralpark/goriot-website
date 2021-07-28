@@ -25,10 +25,6 @@ const Header = () => {
     enableBodyScroll(targetRef);
   };
 
-  const mobileLogoClass = showNav
-    ? `${classes.logo} ${classes.logoHide}`
-    : `${classes.logo}`;
-
   const burgerClasses = showNav
     ? `${classes.navIcon4} ${classes.open}`
     : `${classes.navIcon4}`;
@@ -38,7 +34,7 @@ const Header = () => {
       <header ref={targetRef}>
         <Link to="/">
           <div className={classes.logoContainer}>
-            <LogoVert className={mobileLogoClass} />
+            <LogoVert className={classes.logo} />
           </div>
         </Link>
 
@@ -102,7 +98,7 @@ const Header = () => {
                     It would always be the same
                   </p>
                 </div>
-                <div className={classes.tripleLogo}>
+                <div>
                   <TripleLogo className />
                 </div>
                 <div>

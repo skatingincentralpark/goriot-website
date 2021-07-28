@@ -84,7 +84,6 @@ const Lookbook = (props) => {
             <div
               onMouseEnter={showArchiveHandler}
               onMouseLeave={hideArchiveHandler}
-              className={classes.archiveLabel}
               role="navigation"
             >
               Archive
