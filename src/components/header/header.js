@@ -5,10 +5,10 @@ import { Link } from "gatsby";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import LogoVert from "../../svg/logoVert.svg";
-import Logo from "../../svg/logo.svg";
-import LogoSpike from "../../svg/logo1.svg";
+import TripleLogo from "../../svg/tripleLogo.svg";
+import Binoc from "../../svg/binoc.svg";
 
-import * as classes from "./header.module.css";
+import * as classes from "./Header.module.css";
 
 const Header = () => {
   const targetRef = useRef(null);
@@ -41,6 +41,7 @@ const Header = () => {
             <LogoVert className={mobileLogoClass} />
           </div>
         </Link>
+
         <div className={classes.insideHeader}>
           <div
             className={burgerClasses}
@@ -51,6 +52,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+
       <Transition in={showNav} timeout={500} mountOnEnter unmountOnExit>
         {(state) => {
           const navContainerClasses = [
@@ -64,10 +66,33 @@ const Header = () => {
 
           return (
             <div className={navContainerClasses.join(" ")}>
-              <Logo className={classes.logo2} />
-              <div className={classes.navInnerContainer}>
-                <div className={classes.decoration}>
-                  <p className={classes.navText}>
+              <nav>
+                <Link onClick={closeNavHandler} to="/shop">
+                  Shop
+                </Link>
+                <Link onClick={closeNavHandler} to="/news">
+                  News
+                </Link>
+                <Link onClick={closeNavHandler} to="/shop">
+                  About
+                </Link>
+                <Link onClick={closeNavHandler} to="/lookbook/2021AW">
+                  Lookbook
+                </Link>
+                <Link onClick={closeNavHandler} to="/shop">
+                  Sydney Artists
+                </Link>
+                <Link onClick={closeNavHandler} to="/shop">
+                  FAQ
+                </Link>
+                <Link onClick={closeNavHandler} to="/shop">
+                  Instagram
+                </Link>
+              </nav>
+              <div className={classes.decorations}>
+                <Binoc className={classes.svgBinoc} />
+                <div>
+                  <p>
                     If you came this way,
                     <br />
                     Taking any route, starting from anywhere,
@@ -76,39 +101,18 @@ const Header = () => {
                     <br />
                     It would always be the same
                   </p>
-                  <LogoSpike className={classes.logoSpike} />
                 </div>
-                <nav>
-                  <Link onClick={closeNavHandler} to="/shop">
-                    Shop
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/news">
-                    News
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/shop">
-                    About
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/lookbook/2021AW">
-                    Lookbook
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/shop">
-                    Sydney Artists
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/shop">
-                    FAQ
-                  </Link>
-                  <Link onClick={closeNavHandler} to="/shop">
-                    Instagram
-                  </Link>
-                </nav>
+                <div className={classes.tripleLogo}>
+                  <TripleLogo className />
+                </div>
+                <div>
+                  <p>© Goriot 2021.</p>
+                </div>
               </div>
             </div>
           );
         }}
       </Transition>
-      {showNav && (
-        <div className={classes.backdrop} onClick={closeNavHandler}></div>
-      )}
     </Fragment>
   );
 };
